@@ -1,0 +1,5 @@
+mat <- matrix(1:20, nrow = 5, ncol = 4)
+print(mat[2, 3])
+print(mat[, 2])
+print(mat[4, ])
+print(mat[c(2, 4), c(1, 3)])

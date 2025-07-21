@@ -1,0 +1,5 @@
+list1 <- list("a", "b")
+list2 <- list(1, 2)
+list3 <- list(TRUE, FALSE)
+merged_list <- c(list1, list2, list3)
+print(length(merged_list))
