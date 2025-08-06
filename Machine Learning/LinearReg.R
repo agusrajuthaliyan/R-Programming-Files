@@ -8,4 +8,5 @@ View(data)
 
 split <- sample.split(data,SplitRatio = 0.7)
 train_data <- subset(data,split = TRUE)
+View(train_data)
 test_data <- subset(data,split = FALSE)
