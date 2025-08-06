@@ -1,16 +1,13 @@
 library(ggplot2)
 library(caTools)
 
-heart <- read.csv("D:/RAJAGIRI/S3/BMAAR/R-Programs/Regressions/heart-data.csv")
 income <- read.csv("D:/RAJAGIRI/S3/BMAAR/R-Programs/Regressions/income-data.csv")
 
-View(heart)
 View(income)
 
 summary(heart)
 
 str(heart)
-
 
 # Split - Test data
 split <-sample.split(income$happiness,SplitRatio = 0.8)
