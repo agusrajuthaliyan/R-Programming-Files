@@ -23,7 +23,7 @@ View(train)
 test <- subset(cleaned_data, split == FALSE)
 View(test)
 
-# Labeling cat to binaryand visualising the log Reg
+# Labeling cat to binary and visualizing the log Reg
 train %>%
   mutate(prob = ifelse(diabetes == "pos",1,0)) %>%
   ggplot(aes(glucose,prob)) +
@@ -32,8 +32,16 @@ train %>%
 
 # Model building
 
-model <- glm(data=train,
+## Binary Logistic Regression
+
+bin_model <- glm(data=train,
              diabetes ~ glucose,
              family = binomial)
+summary(bin_model)
 
-summary(model)
+## Multiple Logistic Regression
+
+multi_model <- glm(data=train,
+                   diabetes ~ glucose + mass + pregnant,
+                   family = binomial)
+summary(multi_model)
